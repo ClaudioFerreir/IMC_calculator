@@ -6,13 +6,13 @@ function App() {
 
   return (
     <>
-      <header>
-        <img src={IMCLogo} className="logo" alt="IMC logo" />
-        <h1 className='title'>Calculadora de IMC</h1>
-      </header>
-      <main>
+      <div className="container">
+        <header>
+          <img src={IMCLogo} className="logo" alt="IMC logo" />
+          <h1 className='title'>Calculadora de IMC</h1>
+        </header>
         <Formulario />
-      </main>
+      </div>
     </>
   )
 }

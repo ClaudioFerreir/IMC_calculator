@@ -1,0 +1,12 @@
+.IMCForm {
+  display: flex;
+  max-width: 400px;
+  width: 100%;
+}
+
+.formItem {
+  display: block;
+  text-align: center;
+  width: 100%;
+}
+
