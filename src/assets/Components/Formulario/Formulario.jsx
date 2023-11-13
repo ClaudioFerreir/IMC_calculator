@@ -22,17 +22,17 @@ const Formulario = () => {
   const warningIMC = () => {
     if (exibirAviso) {
       if (renderIMC() < 18.5) {
-        return <p>Você está abaixo do peso</p>
+        return <p className={styles.alertRed}>Você está abaixo do peso</p>
       }else if (renderIMC() < 24.9) {
-        return <p>Você está com o peso normal</p>
+        return <p className={styles.alertGreen}>Você está com o peso normal</p>
       }else if (renderIMC() < 29.9) {
-        return <p>Você está com sobrepeso</p>
+        return <p className={styles.alertYellow}>Você está com sobrepeso</p>
       }else if (renderIMC() < 34.9) {
-        return <p>Você está com obesidade grau 1</p>
+        return <p className={styles.alertRed}>Você está com obesidade grau 1</p>
       }else if (renderIMC() < 39.9) {
-        return <p>Você está com obesidade grau 2 (severa)</p>
+        return <p className={styles.alertRed}>Você está com obesidade grau 2 (severa)</p>
       }else if (renderIMC() >= 40) {
-        return <p>Você está com obesidade grau 3 (mórbida)</p>
+        return <p className={styles.alertRed}>Você está com obesidade grau 3 (mórbida)</p>
       }else {
         return null;
       }
@@ -43,16 +43,17 @@ const Formulario = () => {
     <>
       <form className={styles.IMCForm}>
         <div className={styles.formItem}>
-          <label htmlFor="peso">Digite o seu peso:</label>
-          <input type="number" id="peso" onChange={evento => setPeso(parseFloat(evento.target.value))}/> kg
+          <label htmlFor="peso">Digite o seu peso(kg):</label>
+          <input type="number" id="peso" onChange={evento => setPeso(parseFloat(evento.target.value))}/> 
         </div>
         <div className={styles.formItem}>
-          <label htmlFor="altura">Digite a sua altura:</label>
-          <input type="number" id="altura" onChange={evento => setAltura(parseFloat(evento.target.value))}/> m
+          <label htmlFor="altura">Digite a sua altura(m):</label>
+          <input type="number" id="altura" onChange={evento => setAltura(parseFloat(evento.target.value))}/> 
         </div>
       </form>
       <div className={styles.IMCResult}>
-        <p>Seu IMC é: <span>{ renderIMC() }</span></p>
+        <p>Seu IMC é: </p>
+        <p className={styles.IMC}>{ renderIMC() }</p>
       </div>
       { exibirAviso && (
         <div className={styles.IMCWarning}>

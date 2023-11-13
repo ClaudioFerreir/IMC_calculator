@@ -1,6 +1,6 @@
 .IMCForm {
   display: flex;
-  max-width: 400px;
+  max-width: 600px;
   width: 100%;
 }
 
@@ -8,5 +8,41 @@
   display: block;
   text-align: center;
   width: 100%;
+}
+
+.IMCResult {
+  display: block;
+  text-align: center;
+  width: 100%;
+  margin-top: 2em;
+}
+
+.IMC {
+  font-size: 2em;
+}
+
+
+.alertGreen {
+  color: #05fa05;
+  padding: 1em;
+  border:2px solid #05fa05;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.alertYellow {
+  color: #ffff00;
+  padding: 1em;
+  border:2px solid #ffff00;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.alertRed {
+  color: #ff0000;
+  padding: 1em;
+  border:2px solid #ff0000;
+  border-radius: 5px;
+  font-weight: bold;
 }
 
